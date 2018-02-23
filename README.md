@@ -10,10 +10,9 @@ _This webpage presents the owner of a salon with a list of their stylists and th
 
 ## Specifications
 
-* _Program takes an input for the string to be searched:_
-	* _Example input: "hello, hello, hello! how are you doing?"_
-	* _Example output: none_
-	* _Description: This string includes punctuation and multiple instance of one word, and therefore should be a good example for this and future method tests._
+* _Program displays list of employees/stylists:_
+	* _Example input: 'View Stylists'_
+	* _Example output: 'John, Jane, Jim, etc.'_
 
 ## Setup/Installation Requirements
 

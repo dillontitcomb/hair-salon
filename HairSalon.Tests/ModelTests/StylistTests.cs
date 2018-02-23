@@ -17,5 +17,15 @@ namespace HairSalon.Tests
     {
       DBConfiguration.ConnectionString = "server=localhost;user id=root;password=root;port=8889;database=dillon_titcomb_test;";
     }
+		[TestMethod]
+	 public void GetAll_DataBaseEmptyAtFirst_0()
+	 {
+		 //Arrange, Act
+		 int result = Stylist.GetAll().Count;
+		 Console.WriteLine("This is the number of stylists in DB: " + result);
+
+		 //Assert
+		 Assert.AreEqual(0, result);
+	 }
   }
 }

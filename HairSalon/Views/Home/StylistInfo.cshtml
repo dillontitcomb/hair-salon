@@ -8,14 +8,17 @@
   <body>
     <div class="container">
       <div class="jumbotron">
-        <h1>Hans' Salon: I will make you beautiful!</h1>
-				<h4>(Administrator View)</h4>
+        <h1>Stylist: @Model.GetName()</h1>
 			</div>
-			<h3><a href="/stylists">Stylists</a></h3>
-
-			<hr>
-			<h3><a href="/clients/add">Add New Client</a></h3>
-			<hr>
-    </div>
+			@if(Model!=null)
+			{
+				<h3>Name: @Model.GetName()</h3>
+				<h3>Client List:</h3>
+				<ul>
+				</ul>
+				<hr>
+			}
+			<a href="/stylists">Return to stylist list</a>
+		</div>
   </body>
 </html>

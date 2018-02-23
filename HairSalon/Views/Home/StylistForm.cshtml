@@ -8,14 +8,15 @@
   <body>
     <div class="container">
       <div class="jumbotron">
-        <h1>Hans' Salon: I will make you beautiful!</h1>
-				<h4>(Administrator View)</h4>
+        <h1>New Hire?</h1>
+				<h4>Add your new stylist below.</h4>
 			</div>
-			<h3><a href="/stylists">Stylists</a></h3>
-
-			<hr>
-			<h3><a href="/clients/add">Add New Client</a></h3>
-			<hr>
+			<form action="/stylists" method="post">
+				<hr>
+				<label for="stylist-name">Name: </label>
+				<input type="text" name="stylist-name">
+				<hr>
+				<button type="submit" class="btn btn-success">Submit</button>
     </div>
   </body>
 </html>

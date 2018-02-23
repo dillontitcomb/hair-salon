@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
+    <title>Hans' Salon</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Add Client</h1>
+				<h4>Add a new client and assign them to a stylist.</h4>
+			</div>
+			<form action="/clients" method="post">
+				<hr>
+				<label for="client-name">Name: </label>
+				<input type="text" name="client-name">
+				<hr>
+				<label for="assigned-stylist">Choose Stylist:</label>
+				<select name="assigned-stylist">
+					@if(Model!=null)
+					{
+						foreach (var stylist in Model)
+						{
+							<option value="@stylist.GetId()">@stylist.GetName()</option>
+						}
+					}
+				</select><hr>
+				<button type="submit" class="btn btn-success">Submit</button>
+    </div>
+  </body>
+</html>

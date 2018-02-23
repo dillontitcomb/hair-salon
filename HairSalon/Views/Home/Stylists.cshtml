@@ -8,14 +8,19 @@
   <body>
     <div class="container">
       <div class="jumbotron">
-        <h1>Hans' Salon: I will make you beautiful!</h1>
-				<h4>(Administrator View)</h4>
+        <h1>Your Stylists</h1>
+				<h4>Click a stylist to see their list of clients.</h4>
 			</div>
-			<h3><a href="/stylists">Stylists</a></h3>
-
+			<a href="/stylists/add">Add a new stylist</a>
 			<hr>
-			<h3><a href="/clients/add">Add New Client</a></h3>
-			<hr>
-    </div>
+			@if(Model!=null)
+			{
+				foreach (var stylist in Model)
+				{
+					<h3><a href="/stylists/@stylist.GetId()">@stylist.GetName()</a></h3>
+				}
+			}
+			<a href="/">Return to homepage</a>
+		</div>
   </body>
 </html>

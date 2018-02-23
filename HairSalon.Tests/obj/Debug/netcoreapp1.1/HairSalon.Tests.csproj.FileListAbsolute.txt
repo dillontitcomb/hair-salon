@@ -1,0 +1,14 @@
+C:\Users\dillo\Desktop\HairSalon.Solution\HairSalon.Tests\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\dillo\Desktop\HairSalon.Solution\HairSalon.Tests\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\dillo\Desktop\HairSalon.Solution\HairSalon.Tests\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\dillo\Desktop\HairSalon.Solution\HairSalon.Tests\bin\Debug\netcoreapp1.1\HairSalon.Tests.deps.json
+C:\Users\dillo\Desktop\HairSalon.Solution\HairSalon.Tests\bin\Debug\netcoreapp1.1\HairSalon.Tests.runtimeconfig.json
+C:\Users\dillo\Desktop\HairSalon.Solution\HairSalon.Tests\bin\Debug\netcoreapp1.1\HairSalon.Tests.runtimeconfig.dev.json
+C:\Users\dillo\Desktop\HairSalon.Solution\HairSalon.Tests\bin\Debug\netcoreapp1.1\HairSalon.Tests.dll
+C:\Users\dillo\Desktop\HairSalon.Solution\HairSalon.Tests\bin\Debug\netcoreapp1.1\HairSalon.Tests.pdb
+C:\Users\dillo\Desktop\HairSalon.Solution\HairSalon.Tests\bin\Debug\netcoreapp1.1\HairSalon.dll
+C:\Users\dillo\Desktop\HairSalon.Solution\HairSalon.Tests\bin\Debug\netcoreapp1.1\HairSalon.pdb
+C:\Users\dillo\Desktop\HairSalon.Solution\HairSalon.Tests\obj\Debug\netcoreapp1.1\HairSalon.Tests.csproj.CoreCompileInputs.cache
+C:\Users\dillo\Desktop\HairSalon.Solution\HairSalon.Tests\obj\Debug\netcoreapp1.1\HairSalon.Tests.AssemblyInfo.cs
+C:\Users\dillo\Desktop\HairSalon.Solution\HairSalon.Tests\obj\Debug\netcoreapp1.1\HairSalon.Tests.dll
+C:\Users\dillo\Desktop\HairSalon.Solution\HairSalon.Tests\obj\Debug\netcoreapp1.1\HairSalon.Tests.pdb

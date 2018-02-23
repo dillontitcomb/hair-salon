@@ -27,7 +27,7 @@ namespace HairSalon.Tests
 		 //Assert
 		 Assert.AreEqual(0, result);
 	 }
-	 [TestMethod]
+	 	[TestMethod]
     public void Save_AssignsIdToObject_Id()
     {
       //Arrange
@@ -44,5 +44,18 @@ namespace HairSalon.Tests
       //Assert
       Assert.AreEqual(testId, result);
     }
+		[TestMethod]
+		public void Find_FindsStylistInDatabase_Stylist()
+		{
+		  //Arrange
+		  Stylist testStylist = new Stylist("James");
+		  testStylist.Save();
+
+		  //Act
+		  Stylist foundStylist = Stylist.Find(testStylist.GetId());
+
+		  //Assert
+		  Assert.AreEqual(testStylist, foundStylist);
+		}
   }
 }

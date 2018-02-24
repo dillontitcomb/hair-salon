@@ -12,13 +12,16 @@
 			</div>
 			@if(Model!=null)
 			{
-				<h3>Name: @Model.GetName()</h3>
 				<h3>Client List:</h3>
-				<ul>
-				</ul>
+				foreach (var client in @Model.GetClients())
+				{
+					<ul>
+						<li><h4>@client.GetName()</h4></li>
+					</ul>
+				}
 				<hr>
 			}
-			<a href="/stylists">Return to stylist list</a>
+			<h5><strong><a href="/stylists">Return to stylist list</a></strong></h5>
 		</div>
   </body>
 </html>

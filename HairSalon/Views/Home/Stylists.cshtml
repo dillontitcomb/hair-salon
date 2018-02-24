@@ -11,7 +11,7 @@
         <h1>Your Stylists</h1>
 				<h4>Click a stylist to see their list of clients.</h4>
 			</div>
-			<a href="/stylists/add">Add a new stylist</a>
+			<h5><strong><a href="/stylists/add">Add a new stylist</a></strong></h5>
 			<hr>
 			@if(Model!=null)
 			{
@@ -20,7 +20,8 @@
 					<h3><a href="/stylists/@stylist.GetId()">@stylist.GetName()</a></h3>
 				}
 			}
-			<a href="/">Return to homepage</a>
+			<hr>
+			<h5><strong><a href="/">Return to homepage</a></strong></h5>
 		</div>
   </body>
 </html>

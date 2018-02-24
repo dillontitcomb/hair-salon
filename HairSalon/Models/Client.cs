@@ -71,7 +71,7 @@ namespace HairSalon.Models
       }
       return allClients;
     }
-		public Stylist GetStylist(int id)
+		public Stylist GetStylist()
     {
       MySqlConnection conn = DB.Connection();
       conn.Open();
@@ -80,7 +80,7 @@ namespace HairSalon.Models
 
 			MySqlParameter searchId = new MySqlParameter();
 			searchId.ParameterName = "@search_id";
-			searchId.Value = id;
+			searchId.Value = _stylistId;
 			cmd.Parameters.Add(searchId);
 
       MySqlDataReader rdr = cmd.ExecuteReader() as MySqlDataReader;

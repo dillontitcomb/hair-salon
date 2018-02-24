@@ -11,19 +11,19 @@
         <h1>All Clients</h1>
 				<h4>Click a client to see their assigned stylist.</h4>
 			</div>
-			<h5><strong><a href="/clients/add">Add a new client</a></strong></h5>
+			<h5><strong><a class="btn btn-info" href="/clients/add">Add a new client</a></strong></h5>
 			<hr>
 			<ul>
 			@if(Model!=null)
 			{
 				foreach (var client in Model)
 				{
-					<li><strong>@client.GetName()</strong>, assigned to stylist <a href="/stylists/@client.GetStylist(@client.GetStylistId()).GetId()">@client.GetStylist(@client.GetStylistId()).GetName()</a></li>
+					<li><strong>@client.GetName()</strong>, assigned to stylist <a href="/stylists/@client.GetStylist().GetId()">@client.GetStylist().GetName()</a></li>
 				}
 			}
 			</ul>
 			<hr>
-			<h5><strong><a href="/">Return to homepage</a></strong></h5>
+			<h5><strong><a href="/">Home</a></strong> | <strong><a href="/stylists">Stylists</a></strong> | <strong><a href="/clients">Clients</a></strong></h5>
 		</div>
   </body>
 </html>

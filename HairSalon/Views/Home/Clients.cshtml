@@ -13,13 +13,15 @@
 			</div>
 			<h5><strong><a href="/clients/add">Add a new client</a></strong></h5>
 			<hr>
+			<ul>
 			@if(Model!=null)
 			{
 				foreach (var client in Model)
 				{
-					<h3>@client.GetName()</h3>
+					<li><strong>@client.GetName()</strong>, assigned to stylist <a href="/stylists/@client.GetStylist(@client.GetStylistId()).GetId()">@client.GetStylist(@client.GetStylistId()).GetName()</a></li>
 				}
 			}
+			</ul>
 			<hr>
 			<h5><strong><a href="/">Return to homepage</a></strong></h5>
 		</div>

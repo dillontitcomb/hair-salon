@@ -56,5 +56,11 @@ namespace HairSalon.Controllers
 					List<Client> clientList = Client.GetAll();
 					return View(clientList);
         }
+				[HttpGet("/clients/{id}")]
+        public ActionResult Clients(int id)
+        {
+					Client foundClient = Client.Find(id);
+					return View(foundClient);
+        }
     }
 }

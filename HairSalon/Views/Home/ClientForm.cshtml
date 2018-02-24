@@ -13,10 +13,11 @@
 			</div>
 			<form action="/clients" method="post">
 				<label for="client-name">Name: </label>
-				<input type="text" name="client-name">
+				<input type="text" name="client-name" required>
 				<hr>
 				<label for="assigned-stylist">Choose Stylist:</label>
-				<select name="assigned-stylist">
+				<select name="assigned-stylist" required>
+					<option selected disabled hidden value=""></option>
 					@if(Model!=null)
 					{
 						foreach (var stylist in Model)

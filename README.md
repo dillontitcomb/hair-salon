@@ -20,6 +20,10 @@ _This webpage presents the owner of a salon with a list of their stylists and th
 	* _Example input: 'View Stylists'_
 	* _Example output: 'John, Jane, Jim, etc.'_
 
+* _Program displays list of clients with their associated stylist assignments:_
+	* _Example input: 'View Clients'_
+	* _Example output: 'Joseph assigned to John, Tom assigned to Jane, Alex assigned to Jim'_
+
 * _Program displays information pages for individual stylists:_
 	* _Example input: 'John'_
 	* _Example output: 'Name: John, Clients: Joseph, Tom, Alex'_
@@ -28,7 +32,7 @@ _This webpage presents the owner of a salon with a list of their stylists and th
 	* _Example input: 'Add Sally'_
 	* _Example output: 'Stylist List: John, Jane, Jim, Sally'_
 
-* _Program allows user to assign clients to individual stylists:_
+* _Program allows user to add and assign clients to individual stylists:_
 	* _Example input: 'Assign to Sally'_
 	* _Example output: 'Sally's Client List: Beverly, Timothy, Sam'_
 
@@ -50,7 +54,7 @@ _This webpage presents the owner of a salon with a list of their stylists and th
 * _dotnet build_
 * _dotnet run_
 * _Navigate to "localhost:5000" in browser_
-* _Input a string to be searched and a keyword_
+* _Add stylists and clients to your heart's desire._
 
 ## Known Bugs
 

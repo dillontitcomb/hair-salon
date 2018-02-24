@@ -66,11 +66,10 @@ namespace HairSalon.Tests
 			testStylist.Save();
 			int matchingId = testStylist.GetId();
 			Client testClient = new Client("John", matchingId);
-
 			testClient.Save();
 
 		  //Act
-		  Stylist foundStylist = testClient.GetStylist(matchingId);
+		  Stylist foundStylist = testClient.GetStylist();
 
 		  //Assert
 		  Assert.AreEqual(testStylist.GetName(), foundStylist.GetName());

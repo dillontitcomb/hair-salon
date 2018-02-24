@@ -12,6 +12,7 @@ namespace HairSalon.Tests
     public void Dispose()
     {
       Client.DeleteAll();
+			Stylist.DeleteAll();
     }
     public ClientTests()
     {
@@ -61,17 +62,18 @@ namespace HairSalon.Tests
 		public void GetStylist_FindsAssignedStylist_Stylist()
 		{
 		  //Arrange
-			Client testClient = new Client("John", 50);
-			int matchingId = testClient.GetStylistId();
-		  Stylist testStylist = new Stylist("James", matchingId);
+		 	Stylist testStylist = new Stylist("James");
+			testStylist.Save();
+			int matchingId = testStylist.GetId();
+			Client testClient = new Client("John", matchingId);
+
 			testClient.Save();
-		  testStylist.Save();
 
 		  //Act
 		  Stylist foundStylist = testClient.GetStylist(matchingId);
 
 		  //Assert
-		  Assert.AreEqual(testStylist, foundStylist);
+		  Assert.AreEqual(testStylist.GetName(), foundStylist.GetName());
 		}
   }
 }

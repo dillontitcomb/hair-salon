@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
+    <title>Hans' Salon</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Add Specialty</h1>
+				<h4>Add a new specialty</h4>
+			</div>
+			<form action="/specialties" method="post">
+				<label for="specialty-name">Name: </label>
+				<input type="text" name="specialty-name" required>
+				<hr>
+				<button type="submit" class="btn btn-info">Add Specialty</button>
+      </form>
+				<h5><strong><a href="/">Home</a></strong> | <strong><a href="/stylists">Stylists</a></strong> | <strong><a href="/clients">Clients</a></strong></h5>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
+    <title>Hans' Salon</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Your Specialties</h1>
+				<h4>Click a specialty to see the stylists that possess it</h4>
+			</div>
+			<h5><strong><a class="btn btn-info" href="/specialties/add">Add a new specialty</a></strong></h5>
+			<hr>
+			@if(Model!=null)
+			{
+				foreach (var specialty in Model)
+				{
+					<h3><a href="/specialties/@specialty.GetId()">@specialty.GetName()</a></h3>
+				}
+			}
+			<hr>
+			<h5><strong><a href="/">Home</a></strong> | <strong><a href="/stylists">Stylists</a></strong> | <strong><a href="/clients">Clients</a></strong></h5>
+		</div>
+  </body>
+</html>

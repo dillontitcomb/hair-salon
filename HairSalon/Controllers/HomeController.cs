@@ -62,5 +62,30 @@ namespace HairSalon.Controllers
 					Client foundClient = Client.Find(id);
 					return View(foundClient);
         }
+        [HttpGet("/specialties")]
+        public ActionResult Specialties()
+        {
+					List<Specialty> specialtiesList = Specialty.GetAll();
+          return View(specialtiesList);
+        }
+        [HttpPost("/specialties")]
+        public ActionResult AddSpecialty()
+        {
+  				Specialty newSpecialty = new Specialty(Request.Form["specialty-name"]);
+  				newSpecialty.Save();
+  				List<Specialty> specialtyList = Specialty.GetAll();
+          return View("Specialties", specialtyList);
+        }
+        [HttpGet("/specialties/add")]
+        public ActionResult SpecialtyForm()
+        {
+          return View();
+        }
+				[HttpGet("/specialties/{id}")]
+        public ActionResult SpecialtyInfo(int id)
+        {
+					Specialty foundSpecialty = Specialty.Find(id);
+          return View(foundSpecialty);
+        }
     }
 }

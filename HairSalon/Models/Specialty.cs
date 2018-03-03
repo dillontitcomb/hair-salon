@@ -116,6 +116,63 @@ namespace HairSalon.Models
 			}
 			return foundSpecialty;
     }
+    public void AddStylist(Stylist newStylist)
+    {
+      MySqlConnection conn = DB.Connection();
+      conn.Open();
+      var cmd = conn.CreateCommand() as MySqlCommand;
+      cmd.CommandText = @"INSERT INTO stylists_specialties (stylist_id, specialty_id) VALUES (@stylistId, @specialtyId);";
+
+      MySqlParameter stylist_id = new MySqlParameter();
+      stylist_id.ParameterName = "@stylistId";
+      stylist_id.Value = newStylist.GetId();
+      cmd.Parameters.Add(stylist_id);
+
+      MySqlParameter specialty_id = new MySqlParameter();
+      specialty_id.ParameterName = "@specialtyId";
+      specialty_id.Value = _id;
+      cmd.Parameters.Add(specialty_id);
+
+      cmd.ExecuteNonQuery();
+      conn.Close();
+      if (conn != null)
+      {
+        conn.Dispose();
+      }
+    }
+
+    public List<Stylist> GetStylists()
+    {
+      MySqlConnection conn = DB.Connection();
+      conn.Open();
+      MySqlCommand cmd = conn.CreateCommand() as MySqlCommand;
+      cmd.CommandText = @"SELECT stylists.* FROM specialties
+          JOIN stylists_specialties ON (specialties.id = stylists_specialties.specialty_id)
+          JOIN stylists ON (stylists_specialties.stylist_id = stylists.id)
+          WHERE stylists.id = @SpecialtyId;";
+
+      MySqlParameter clientIdParameter = new MySqlParameter();
+      clientIdParameter.ParameterName = "@SpecialtyId";
+      clientIdParameter.Value = _id;
+      cmd.Parameters.Add(clientIdParameter);
+
+      MySqlDataReader rdr = cmd.ExecuteReader() as MySqlDataReader;
+      List<Stylist> stylists = new List<Stylist>{};
+
+      while(rdr.Read())
+      {
+        int stylistId = rdr.GetInt32(0);
+        string stylistName = rdr.GetString(1);
+        Stylist newStylist = new Stylist(stylistName, stylistId);
+        stylists.Add(newStylist);
+      }
+      conn.Close();
+      if (conn != null)
+      {
+          conn.Dispose();
+      }
+      return stylists;
+    }
 		public static void DeleteAll()
     {
       MySqlConnection conn = DB.Connection();

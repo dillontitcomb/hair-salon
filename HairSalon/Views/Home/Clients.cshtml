@@ -18,7 +18,11 @@
 			{
 				foreach (var client in Model)
 				{
-					<li><strong>@client.GetName()</strong>, assigned to stylist <a href="/stylists/@client.GetStylist().GetId()">@client.GetStylist().GetName()</a></li>
+					<li><strong>@client.GetName()</strong></li>
+            foreach (var stylist in @client.GetStylists())
+            {
+              <li>Assigned to stylist @stylist.GetName()</li>
+            }
 				}
 			}
 			</ul>

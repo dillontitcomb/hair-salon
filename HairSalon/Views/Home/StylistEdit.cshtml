@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
+    <title>Hans' Salon</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Stylist: @Model.GetName()</h1>
+				<h4>Give this stylist a new name</h4>
+			</div>
+			<form action="/stylists/@Model.GetId()" method="post">
+				<label for="new-stylist-name">New name: </label>
+				<input type="text" name="new-stylist-name" required>
+				<hr>
+				<button type="submit" class="btn btn-info">Submit</button>
+				<hr>
+				<h5><strong><a href="/stylists/@Model.GetId()">Return to stylist</a></strong></h5>
+    </div>
+  </body>
+</html>

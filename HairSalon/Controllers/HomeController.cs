@@ -20,9 +20,44 @@ namespace HairSalon.Controllers
 				[HttpGet("/stylists/{id}")]
         public ActionResult StylistInfo(int id)
         {
+          Dictionary<string, object> model = new Dictionary<string, object>();
+          Stylist selectedStylist = Stylist.Find(id);
+          List<Client> allClients = Client.GetAll();
+          List<Client> stylistClients = selectedStylist.GetClients();
+          List<Specialty> stylistSpecialties = selectedStylist.GetSpecialties();
+          model.Add("selectedStylist", selectedStylist);
+          model.Add("stylistClients", stylistClients);
+          model.Add("stylistSpecialties", stylistSpecialties);
+          model.Add("allClients", allClients);
+          return View(model);
+        }
+        [HttpGet("/stylists/edit/{id}")]
+        public ActionResult StylistEdit(int id)
+        {
 					Stylist foundStylist = Stylist.Find(id);
           return View(foundStylist);
         }
+        [HttpPost("/stylists/{id}")]
+        public ActionResult UpdateStylist(int id)
+        {
+					Stylist newStylist = Stylist.Find(id);
+          newStylist.UpdateStylistName(Request.Form["new-stylist-name"]);
+          return View("StylistInfo", newStylist);
+        }
+        // [HttpPost("/stylists/add/client")]
+        // public ActionResult AddStylistClient(int id)
+        // {
+				// 	Stylist newStylist = Stylist.Find(id);
+        //   Client newClient = new Client(Request.Form("add-client-name"));
+        //   return View("StylistInfo", newStylist);
+        // }
+        // [HttpPost("/stylists/add/specialty")]
+        // public ActionResult AddStylistSpecialty(int id)
+        // {
+				// 	Stylist newStylist = Stylist.Find(id);
+        //   newStylist.UpdateStylistName(Request.Form["new-stylist-name"]);
+        //   return View("StylistInfo", newStylist);
+        // }
 				[HttpGet("/stylists/add")]
         public ActionResult StylistForm()
         {

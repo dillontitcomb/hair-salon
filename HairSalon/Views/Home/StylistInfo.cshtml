@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+@using HairSalon.Models;
+
 <html>
   <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
@@ -8,19 +10,42 @@
   <body>
     <div class="container">
       <div class="jumbotron">
-        <h1>Stylist: @Model.GetName()</h1>
+        <h1>Stylist: @Model["selectedStylist"].GetName()</h1>
 			</div>
+      <h6><a href='/stylists/edit/@Model["selectedStylist"].GetId()'>Edit this stylist</a></h6>
 			@if(Model!=null)
 			{
 				<h3>Client List:</h3>
-				foreach (var client in @Model.GetClients())
+				foreach (var client in @Model["stylistClients"])
 				{
 					<ul>
 						<li><h4>@client.GetName()</h4></li>
 					</ul>
 				}
 				<hr>
+        <h3>Stylist Specialties:</h3>
+        foreach (var specialty in @Model["stylistSpecialties"])
+				{
+					<ul>
+						<li><h4>@specialty.GetName()</h4></li>
+					</ul>
+				}
+				<hr>
 			}
+      <h4>Add a client to this stylist:</h4>
+      <form action="/stylists/add/client" method="post">
+				<label for="add-client-name">Name: </label>
+				<input type="text" name="add-client-name" required><br>
+				<button type="submit" class="btn btn-info">Submit</button>
+				<hr>
+      </form>
+      <h4>Add a specialty to this stylist:</h4>
+      <form action="/stylists/add/specialty" method="post">
+				<label for="add-specialty-name">Name: </label>
+				<input type="text" name="add-specialty-name" required><br>
+				<button type="submit" class="btn btn-info">Submit</button>
+				<hr>
+      </form>
 			<h5><strong><a href="/">Home</a></strong> | <strong><a href="/stylists">Stylists</a></strong> | <strong><a href="/clients">Clients</a></strong></h5>
 		</div>
   </body>

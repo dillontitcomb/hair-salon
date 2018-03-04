@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+@using HairSalon.Models;
+
 <html>
   <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
@@ -8,21 +10,20 @@
   <body>
     <div class="container">
       <div class="jumbotron">
-        <h1>All Clients</h1>
-				<h4>Click a client to see their assigned stylist.</h4>
+        <h1>Client: @Model["selectedClient"].GetName()</h1>
 			</div>
-			<h5><strong><a class="btn btn-info" href="/clients/add">Add a new client</a></strong></h5>
-			<hr>
-			<ul>
+      <h6><a href='/clients/edit/@Model["selectedClient"].GetId()'>Edit this client</a></h6>
 			@if(Model!=null)
 			{
-				foreach (var client in Model)
+				<h3>Assigned stylists:</h3>
+				foreach (var stylist in @Model["clientStylists"])
 				{
-					<li><strong><a href="/clients/@client.GetId()">@client.GetName()</a></strong></li>
+					<ul>
+						<li><h4>@stylist.GetName()</h4></li>
+					</ul>
 				}
-			}
-			</ul>
-			<hr>
+      }
+      <hr>
 			<h5><strong><a href="/">Home</a></strong> | <strong><a href="/stylists">Stylists</a></strong> | <strong><a href="/clients">Clients</a></strong></h5>
 		</div>
   </body>

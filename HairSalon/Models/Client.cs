@@ -116,7 +116,7 @@ namespace HairSalon.Models
 			}
 			return foundClient;
     }
-    public void AddStylist(Stylist newStylist)
+    public void AddStylist(Stylist chosenStylist)
     {
       MySqlConnection conn = DB.Connection();
       conn.Open();
@@ -125,7 +125,7 @@ namespace HairSalon.Models
 
       MySqlParameter stylist_id = new MySqlParameter();
       stylist_id.ParameterName = "@stylistId";
-      stylist_id.Value = newStylist.GetId();
+      stylist_id.Value = chosenStylist.GetId();
       cmd.Parameters.Add(stylist_id);
 
       MySqlParameter client_id = new MySqlParameter();
@@ -149,12 +149,12 @@ namespace HairSalon.Models
       cmd.CommandText = @"SELECT stylists.* FROM clients
           JOIN stylists_clients ON (clients.id = stylists_clients.client_id)
           JOIN stylists ON (stylists_clients.stylist_id = stylists.id)
-          WHERE stylists.id = @StylistId;";
+          WHERE clients.id = @ClientId;";
 
-      MySqlParameter stylistIdParameter = new MySqlParameter();
-      stylistIdParameter.ParameterName = "@StylistId";
-      stylistIdParameter.Value = _id;
-      cmd.Parameters.Add(stylistIdParameter);
+      MySqlParameter clientIdParameter = new MySqlParameter();
+      clientIdParameter.ParameterName = "@ClientId";
+      clientIdParameter.Value = _id;
+      cmd.Parameters.Add(clientIdParameter);
 
       MySqlDataReader rdr = cmd.ExecuteReader() as MySqlDataReader;
       List<Stylist> stylists = new List<Stylist>{};

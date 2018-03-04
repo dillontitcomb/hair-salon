@@ -60,6 +60,11 @@
         </select>
         <button class="btn btn-info" type="submit">Add specialty</button>
       </form>
+      <hr>
+      <form action='/stylists/delete/@Model["selectedStylist"].GetId()' method="post">
+        <button class="btn btn-danger" type="submit">Delete Stylist</button>
+      </form>
+      <hr>
 			<h5><strong><a href="/">Home</a></strong> | <strong><a href="/stylists">Stylists</a></strong> | <strong><a href="/clients">Clients</a></strong></h5>
 		</div>
   </body>

@@ -33,18 +33,32 @@
 				<hr>
 			}
       <h4>Add a client to this stylist:</h4>
-      <form action="/stylists/add/client" method="post">
-				<label for="add-client-name">Name: </label>
-				<input type="text" name="add-client-name" required><br>
-				<button type="submit" class="btn btn-info">Submit</button>
-				<hr>
+      <form action='/stylists/add/client/@Model["selectedStylist"].GetId()' method="post">
+        <select name="add-new-client" required>
+					<option selected disabled hidden value=""></option>
+					@if(Model!=null)
+					{
+						foreach (var client in @Model["allClients"])
+						{
+							<option value=@client.GetId()>@client.GetName()</option>
+						}
+					}
+				</select>
+        <button class="btn btn-info" type="submit">Add client</button>
       </form>
       <h4>Add a specialty to this stylist:</h4>
-      <form action="/stylists/add/specialty" method="post">
-				<label for="add-specialty-name">Name: </label>
-				<input type="text" name="add-specialty-name" required><br>
-				<button type="submit" class="btn btn-info">Submit</button>
-				<hr>
+      <form action='/stylists/add/specialty/@Model["selectedStylist"].GetId()' method="post">
+        <select name="add-new-specialty" required>
+          <option selected disabled hidden value=""></option>
+          @if(Model!=null)
+          {
+            foreach (var specialty in @Model["allSpecialties"])
+            {
+              <option value=@specialty.GetId()>@specialty.GetName()</option>
+            }
+          }
+        </select>
+        <button class="btn btn-info" type="submit">Add specialty</button>
       </form>
 			<h5><strong><a href="/">Home</a></strong> | <strong><a href="/stylists">Stylists</a></strong> | <strong><a href="/clients">Clients</a></strong></h5>
 		</div>

@@ -8,16 +8,16 @@
   <body>
     <div class="container">
       <div class="jumbotron">
-        <h1>Add Stylist</h1>
-				<h4>Add a new stylist to the team.</h4>
+        <h1>Client: @Model.GetName()</h1>
+				<h4>Give this client a new name</h4>
 			</div>
-			<form action="/stylists" method="post">
-				<label for="stylist-name">Name: </label>
-				<input type="text" name="stylist-name" required>
+			<form action="/clients/@Model.GetId()" method="post">
+				<label for="new-client-name">New name: </label>
+				<input type="text" name="new-client-name" required>
 				<hr>
 				<button type="submit" class="btn btn-info">Submit</button>
 				<hr>
-				<h5><strong><a href="/">Home</a></strong> | <strong><a href="/stylists">Stylists</a></strong> | <strong><a href="/specialties">Specialties</a></strong> | <strong><a href="/clients">Clients</a></strong></h5>
+				<h5><strong><a href="/clients/@Model.GetId()">Return to client</a></strong></h5>
     </div>
   </body>
 </html>

@@ -17,6 +17,12 @@ namespace HairSalon.Controllers
 					List<Stylist> stylistList = Stylist.GetAll();
           return View(stylistList);
         }
+        [HttpPost("/stylists/deleteall")]
+        public ActionResult DeleteAllStylists()
+        {
+					Stylist.DeleteAll();
+          return View("Stylists");
+        }
 				[HttpGet("/stylists/{id}")]
         public ActionResult StylistInfo(int id)
         {
@@ -115,6 +121,33 @@ namespace HairSalon.Controllers
           model.Add("clientStylists", clientStylists);
           return View(model);
         }
+        [HttpGet("/clients/edit/{id}")]
+        public ActionResult ClientEdit(int id)
+        {
+					Client foundClient = Client.Find(id);
+          return View(foundClient);
+        }
+        [HttpPost("/clients/{id}")]
+        public ActionResult UpdateClient(int id)
+        {
+					Client newClient = Client.Find(id);
+          newClient.UpdateClient(Request.Form["new-client-name"]);
+          return RedirectToAction("ClientInfo", new {id = id});
+        }
+        [HttpPost("/clients/deleteall")]
+        public ActionResult DeleteAllClients()
+        {
+					Client.DeleteAll();
+          return View("Clients");
+        }
+        [HttpPost("/clients/delete/{id}")]
+        public ActionResult DeleteClient(int id)
+        {
+          Client newClient = Client.Find(id);
+          newClient.Delete();
+          List<Client> allClients = Client.GetAll();
+          return RedirectToAction("Clients", allClients);
+        }
         [HttpGet("/specialties")]
         public ActionResult Specialties()
         {
@@ -134,11 +167,42 @@ namespace HairSalon.Controllers
         {
           return View();
         }
-				[HttpGet("/specialties/{id}")]
-        public ActionResult SpecialtyInfo(int id)
+        [HttpGet("/specialties/edit/{id}")]
+        public ActionResult SpecialtyEdit(int id)
         {
 					Specialty foundSpecialty = Specialty.Find(id);
           return View(foundSpecialty);
+        }
+        [HttpPost("/specialties/{id}")]
+        public ActionResult UpdateSpecialty(int id)
+        {
+					Specialty newSpecialty = Specialty.Find(id);
+          newSpecialty.UpdateSpecialty(Request.Form["new-specialty-name"]);
+          return RedirectToAction("SpecialtyInfo", new {id = id});
+        }
+				[HttpGet("/specialties/{id}")]
+        public ActionResult SpecialtyInfo(int id)
+        {
+          Dictionary<string, object> model = new Dictionary<string, object>();
+          Specialty selectedSpecialty = Specialty.Find(id);
+          List<Stylist> specialtyStylists = selectedSpecialty.GetStylists();
+          model.Add("selectedSpecialty", selectedSpecialty);
+          model.Add("specialtyStylists", specialtyStylists);
+          return View(model);
+        }
+        [HttpPost("/specialties/deleteall")]
+        public ActionResult DeleteAllSpecialties()
+        {
+					Specialty.DeleteAll();
+          return View("Specialties");
+        }
+        [HttpPost("/specialties/delete/{id}")]
+        public ActionResult DeleteSpecialty(int id)
+        {
+          Specialty newSpecialty = Specialty.Find(id);
+          newSpecialty.Delete();
+          List<Specialty> allSpecialtys = Specialty.GetAll();
+          return RedirectToAction("Specialtys", allSpecialtys);
         }
     }
 }

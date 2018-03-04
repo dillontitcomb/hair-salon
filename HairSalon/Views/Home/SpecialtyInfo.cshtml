@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+@using HairSalon.Models;
+
 <html>
   <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
@@ -8,9 +10,25 @@
   <body>
     <div class="container">
       <div class="jumbotron">
-        <h1>Specialty: @Model.GetName()</h1>
+        <h1>Specialty: @Model["selectedSpecialty"].GetName()</h1>
 			</div>
-			<h5><strong><a href="/">Home</a></strong> | <strong><a href="/stylists">Stylists</a></strong> | <strong><a href="/clients">Clients</a></strong></h5>
+      <h6><a href='/specialties/edit/@Model["selectedSpecialty"].GetId()'>Edit this specialty</a></h6>
+			@if(Model!=null)
+			{
+				<h3>Stylists  with this specialty:</h3>
+				foreach (var stylist in @Model["specialtyStylists"])
+				{
+					<ul>
+						<li><h4>@stylist.GetName()</h4></li>
+					</ul>
+				}
+      }
+      <hr>
+      <form action='/specialties/delete/@Model["selectedSpecialty"].GetId()' method="post">
+        <button type="submit" class="btn btn-danger">Delete Specialty</button>
+      </form>
+      <hr>
+			<h5><strong><a href="/">Home</a></strong> | <strong><a href="/stylists">Stylists</a></strong> | <strong><a href="/specialties">Specialties</a></strong> | <strong><a href="/clients">Clients</a></strong></h5>
 		</div>
   </body>
 </html>

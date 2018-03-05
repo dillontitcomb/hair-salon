@@ -1,6 +1,6 @@
 # _Dillon's Salon Management Program_
 
-#### C# and SQL Exercise for Epicodus, 2.23.2018
+#### C# and SQL Exercise for Epicodus, 3.4.2018
 
 #### By _**Dillon Titcomb**_
 
@@ -57,6 +57,9 @@ _This webpage presents the owner of a salon with a list of their stylists and th
 	* _CREATE DATABASE firstname_lastname;_
 	* _CREATE TABLE stylists (id serial PRIMARY KEY, name VARCHAR(255));_
 	* _CREATE TABLE clients (id serial PRIMARY KEY, name VARCHAR(255));_
+	* _CREATE TABLE stylists (id serial PRIMARY KEY, name VARCHAR(255));_
+	* _CREATE TABLE stylists_specialists (id serial PRIMARY KEY, stylist_id int(11), specialist_id int(11));_
+	* _CREATE TABLE stylists_clients (id serial PRIMARY KEY, stylist_id int(11), client_id int(11));_
 *	_Create test database named 'firstname_lastname_test' by navigating to phpMyAdmin and clicking on your firstname_lastname database_
 * _On a Mac, run the following commands in terminal:_
 * _dotnet add package MySqlConnector_
@@ -64,7 +67,7 @@ _This webpage presents the owner of a salon with a list of their stylists and th
 * _dotnet build_
 * _dotnet run_
 * _Navigate to "localhost:5000" in browser_
-* _Add stylists and clients to your heart's desire._
+* _Add stylists, clients, and specialties to your heart's desire._
 
 ## Known Bugs
 

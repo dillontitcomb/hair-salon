@@ -13,6 +13,16 @@ _This webpage presents the owner of a salon with a list of their stylists and th
 * _As an employee, I need to be able to select a stylist, see their details, and see a list of all clients that belong to that stylist._
 * _As an employee, I need to add new stylists to our system when they are hired._
 * _As an employee, I need to be able to add new clients to a specific stylist. I should not be able to add a client if no stylists have been added._
+* _As an employee, I need to be able to delete stylists (all and single)._
+* _As an employee, I need to be able to delete clients (all and single)._
+* _As an employee, I need to be able to view clients (all and single)._
+* _As an employee, I need to be able to edit JUST the name of a stylist. (You can choose to allow employees to edit additional properties but it is not required.)_
+* _As an employee, I need to be able to edit ALL of the information for a client._
+* _As an employee, I need to be able to add a specialty and view all specialties that have been added._
+* _As an employee, I need to be able to add a specialty to a stylist._
+* _As an employee, I need to be able to click on a specialty and see all of the stylists that have that specialty._
+* _As an employee, I need to see the stylist's specialties on the stylist's details page._
+* _As an employee, I need to be able to add a stylist to a specialty._
 
 ## Specifications
 

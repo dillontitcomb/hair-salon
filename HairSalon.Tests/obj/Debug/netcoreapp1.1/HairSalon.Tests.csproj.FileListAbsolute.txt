@@ -25,3 +25,17 @@ C:/Users/dillo/Desktop/HairSalon.Solution/HairSalon.Tests/obj/Debug/netcoreapp1.
 /Users/Guest/Desktop/HairSalon.Solutions/HairSalon.Tests/obj/Debug/netcoreapp1.1/HairSalon.Tests.AssemblyInfo.cs
 /Users/Guest/Desktop/HairSalon.Solutions/HairSalon.Tests/obj/Debug/netcoreapp1.1/HairSalon.Tests.dll
 /Users/Guest/Desktop/HairSalon.Solutions/HairSalon.Tests/obj/Debug/netcoreapp1.1/HairSalon.Tests.pdb
+/Users/dillontitcomb/Desktop/HairSalon.Solutions/HairSalon.Tests/bin/Debug/netcoreapp1.1/HairSalon.Tests.deps.json
+/Users/dillontitcomb/Desktop/HairSalon.Solutions/HairSalon.Tests/bin/Debug/netcoreapp1.1/HairSalon.Tests.runtimeconfig.json
+/Users/dillontitcomb/Desktop/HairSalon.Solutions/HairSalon.Tests/bin/Debug/netcoreapp1.1/HairSalon.Tests.runtimeconfig.dev.json
+/Users/dillontitcomb/Desktop/HairSalon.Solutions/HairSalon.Tests/obj/Debug/netcoreapp1.1/HairSalon.Tests.csproj.CoreCompileInputs.cache
+/Users/dillontitcomb/Desktop/HairSalon.Solutions/HairSalon.Tests/obj/Debug/netcoreapp1.1/HairSalon.Tests.AssemblyInfo.cs
+/Users/dillontitcomb/Desktop/HairSalon.Solutions/HairSalon.Tests/obj/Debug/netcoreapp1.1/HairSalon.Tests.dll
+/Users/dillontitcomb/Desktop/HairSalon.Solutions/HairSalon.Tests/obj/Debug/netcoreapp1.1/HairSalon.Tests.pdb
+/Users/dillontitcomb/Desktop/HairSalon.Solutions/HairSalon.Tests/bin/Debug/netcoreapp1.1/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+/Users/dillontitcomb/Desktop/HairSalon.Solutions/HairSalon.Tests/bin/Debug/netcoreapp1.1/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+/Users/dillontitcomb/Desktop/HairSalon.Solutions/HairSalon.Tests/bin/Debug/netcoreapp1.1/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+/Users/dillontitcomb/Desktop/HairSalon.Solutions/HairSalon.Tests/bin/Debug/netcoreapp1.1/HairSalon.Tests.dll
+/Users/dillontitcomb/Desktop/HairSalon.Solutions/HairSalon.Tests/bin/Debug/netcoreapp1.1/HairSalon.Tests.pdb
+/Users/dillontitcomb/Desktop/HairSalon.Solutions/HairSalon.Tests/bin/Debug/netcoreapp1.1/HairSalon.dll
+/Users/dillontitcomb/Desktop/HairSalon.Solutions/HairSalon.Tests/bin/Debug/netcoreapp1.1/HairSalon.pdb

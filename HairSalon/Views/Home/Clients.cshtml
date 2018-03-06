@@ -8,20 +8,18 @@
   <body>
     <div class="container">
       <div class="jumbotron">
-        <h1>All Clients</h1>
-				<h4>Click a client to see their assigned stylist.</h4>
+        <h1>Your Clients</h1>
+				<h4>Click a client to see their assigned stylist</h4>
 			</div>
 			<h5><strong><a class="btn btn-info" href="/clients/add">Add a new client</a></strong></h5>
 			<hr>
-			<ul>
 			@if(Model!=null)
 			{
 				foreach (var client in Model)
 				{
-					<li><strong><a href="/clients/@client.GetId()">@client.GetName()</a></strong></li>
+				<h3><a href="/clients/@client.GetId()">@client.GetName()</a></h3>
 				}
 			}
-			</ul>
 			<hr>
       <form class="" action="/clients/deleteall" method="post">
         <button type="submit" class="btn btn-danger">Delete all clients</button>

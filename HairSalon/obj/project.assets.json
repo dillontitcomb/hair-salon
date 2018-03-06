@@ -9655,11 +9655,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/dillontitcomb/Desktop/hair-salon/HairSalon/HairSalon.csproj",
+      "projectUniqueName": "/Users/dillontitcomb/Desktop/HairSalon.Solutions/HairSalon/HairSalon.csproj",
       "projectName": "HairSalon",
-      "projectPath": "/Users/dillontitcomb/Desktop/hair-salon/HairSalon/HairSalon.csproj",
+      "projectPath": "/Users/dillontitcomb/Desktop/HairSalon.Solutions/HairSalon/HairSalon.csproj",
       "packagesPath": "/Users/dillontitcomb/.nuget/packages/",
-      "outputPath": "/Users/dillontitcomb/Desktop/hair-salon/HairSalon/obj/",
+      "outputPath": "/Users/dillontitcomb/Desktop/HairSalon.Solutions/HairSalon/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/dillontitcomb/.nuget/NuGet/NuGet.Config"

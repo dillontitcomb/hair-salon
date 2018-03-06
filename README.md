@@ -30,13 +30,25 @@ _This webpage presents the owner of a salon with a list of their stylists and th
 	* _Example input: 'View Stylists'_
 	* _Example output: 'John, Jane, Jim, etc.'_
 
-* _Program displays list of clients with their associated stylist assignments:_
+* _Program displays list of clients:_
 	* _Example input: 'View Clients'_
-	* _Example output: 'Joseph assigned to John, Tom assigned to Jane, Alex assigned to Jim'_
+	* _Example output: 'Joseph, Tom, Sally'_
 
-* _Program displays information pages for individual stylists:_
+* _Program displays list of specialties:_
+	* _Example input: 'View Specialties'_
+	* _Example output: 'Hair Coloring, Male Cuts, Braiding'_
+
+* _Program displays information pages for individual stylists with edit, delete, and add specialty and client options:_
 	* _Example input: 'John'_
-	* _Example output: 'Name: John, Clients: Joseph, Tom, Alex'_
+	* _Example output: 'Name: John, Clients: Joseph, Tom, Alex. Add Client, Add Specialty.'_
+
+* _Program displays information pages for individual clients with edit and delete options:_
+	* _Example input: 'Joseph'_
+	* _Example output: 'Name: Joseph, Assigned to John.'_
+
+* _Program displays information pages for individual specialties with edit, delete, and add stylist functionality:_
+	* _Example input: 'Braiding'_
+	* _Example output: 'Stylists with this specialty: Joseph, Tom, Alex. Add another stylist.'_
 
 * _Program allows user to add new stylists to stylists list:_
 	* _Example input: 'Add Sally'_
@@ -71,7 +83,7 @@ _This webpage presents the owner of a salon with a list of their stylists and th
 
 ## Known Bugs
 
-_No known bugs._
+_One notable error: duplicate clients and specialties can be added to a single stylist._
 
 ## Support and contact details
 

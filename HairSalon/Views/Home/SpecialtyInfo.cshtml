@@ -24,6 +24,21 @@
 				}
       }
       <hr>
+      <h4>Add this specialty to a stylist:</h4>
+      <form action='/specialties/add/stylist/@Model["selectedSpecialty"].GetId()' method="post">
+        <select name="add-new-specialty" required>
+					<option selected disabled hidden value=""></option>
+					@if(Model!=null)
+					{
+						foreach (var stylist in @Model["allStylists"])
+						{
+							<option value=@stylist.GetId()>@stylist.GetName()</option>
+						}
+					}
+				</select>
+        <button class="btn btn-info" type="submit">Add</button>
+      </form>
+      <hr>
       <form action='/specialties/delete/@Model["selectedSpecialty"].GetId()' method="post">
         <button type="submit" class="btn btn-danger">Delete Specialty</button>
       </form>

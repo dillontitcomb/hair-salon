@@ -6,7 +6,7 @@
 
 ## Description
 
-_This webpage presents the owner of a salon with a list of their stylists and the stylists' clients. The owner can add new stylists to their list of employees and also assign clients to stylists._
+_This webpage presents the owner of a salon with a list of their stylists, the stylists' specialties, and the stylists' clients. The owner can add new stylists, specialties, and assign both clients and specialties to stylists._
 
 ## User Stories
 * _As a salon employee, I need to be able to see a list of all our stylists._
